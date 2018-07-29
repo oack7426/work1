@@ -1,0 +1,674 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*不用計算盒模型*/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* 記得之後把a刪掉 */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 120px);
+    grid-template-rows: repeat(20, 100px);
+    margin: 32px auto;
+    width: 960px;
+    height: 2000px;
+    /* border: 1px solid; */
+}
+
+.grid div {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.title {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: center;
+}
+
+.title>h1 {
+    font-size: 72px;
+    font-weight: 900;
+    padding-top: 15px;
+}
+
+.title>h3 {
+    padding-top: 10px;
+    display: inline-block;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: #000;
+    padding: 5px 10px;
+}
+
+.one {
+    grid-column: 1/5;
+    grid-row: 3/7;
+    background-image: url(https://images.unsplash.com/photo-1513827379601-9dba5099a3f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjF9&s=9b19616e232bd3897c5033df23102c6e&auto=format&fit=crop&w=668&q=80);
+    z-index: 10;
+}
+
+.one>h2 {
+    position: absolute;
+    top: -15px;
+}
+
+.one>h2:before {
+    content: 'LINEN BLAZER';
+    position: absolute;
+    top: -15px;
+    height: 20px;
+    color: #000;
+    opacity: 0.3;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.one>h2:after {
+    content: 'LINEN BLAZER';
+    position: absolute;
+    top: -25px;
+    height: 15px;
+    left: 0;
+    color: #000;
+    opacity: 0.1;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.one>h3 {
+    position: absolute;
+    bottom: -50px;
+}
+
+.one>h4 {
+    position: absolute;
+    transform: rotate(90deg);
+    right: -85px;
+    bottom: 30px;
+}
+
+.one>.slash-box {
+    position: absolute;
+    background-position: left;
+    background-size: auto;
+    width: 240px;
+    height: 100px;
+    /* background: grey; */
+    background-image: url(https://hexschool.github.io/THE_F2E_Design/week4-product%20gallery/assets/pattern%20unit.png);
+    left: 60px;
+    bottom: -50px;
+}
+
+.one-border-box {
+    margin-top: 50px;
+    margin-left: -65px;
+    grid-column-start: 4;
+    grid-row-start: 2;
+    width: 240px;
+    height: 200px;
+    border: 20px solid #50E3C2;
+}
+
+.two {
+    grid-column: 6/8;
+    grid-row: 4/6;
+    background-image: url(https://images.unsplash.com/photo-1514632542677-48fae74a01b2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf412aceb1d689765e387d30fca7210a&auto=format&fit=crop&w=668&q=80);
+    z-index: 10;
+}
+
+.two>h2 {
+    position: absolute;
+    right: -100px;
+    bottom: -70px;
+}
+
+.two>h2:before {
+    content: 'FREELIFT';
+    position: absolute;
+    top: -15px;
+    height: 20px;
+    color: #000;
+    opacity: 0.3;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.two>h2::after {
+    content: 'FREELIFT';
+    position: absolute;
+    top: -25px;
+    height: 15px;
+    left: 0;
+    color: #000;
+    opacity: 0.1;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.two>h4 {
+    position: absolute;
+    left: -15px;
+    top: -25px;
+}
+
+.two-box {
+    position: relative;
+    grid-column: 7/9;
+    grid-row: 3/5;
+    border: 20px solid #50E3C2;
+}
+
+.two-box>.two-boxbox {
+    position: absolute;
+    width: 240px;
+    height: 200px;
+    background: #50E3C2;
+    top: 30px;
+    right: 40px;
+}
+
+.two-box>h3 {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+}
+
+.three {
+    position: relative;
+    grid-column: 1/5;
+    grid-row: 9/11;
+    background-image: url(https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0f994eef47e5fb1a67849703cc961b3&auto=format&fit=crop&w=1350&q=80);
+    z-index: 10;
+}
+
+.three>h2 {
+    position: absolute;
+    right: 0;
+    top: -50px;
+}
+
+.three>h2:before {
+    content: 'SUPER SKINNY';
+    position: absolute;
+    top: -15px;
+    height: 20px;
+    color: #000;
+    opacity: 0.3;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.three>h2:after {
+    content: 'SUPER SKINNY';
+    position: absolute;
+    top: -25px;
+    height: 15px;
+    left: 0;
+    color: #000;
+    opacity: 0.1;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.three>h4 {
+    position: absolute;
+    left: 20px;
+    bottom: -30px;
+}
+
+.three-box {
+    grid-column-start: 3;
+    grid-row-start: 9;
+    position: absolute;
+    left: 60px;
+    bottom: -50px;
+    width: 240px;
+    height: 200px;
+    border: 20px solid #50E3C2;
+}
+
+.three-box>h3 {
+    position: absolute;
+    left: 160px;
+    bottom: -25px;
+}
+
+.four {
+    position: relative;
+    grid-column: 7/9;
+    grid-row: 9/13;
+    background-image: url(https://images.unsplash.com/photo-1484516758160-69878111a911?ixlib=rb-0.3.5&s=593101f82127d40025c1d27fa186ccc7&auto=format&fit=crop&w=774&q=80);
+    z-index: 10;
+}
+
+.four>h2 {
+    transform: rotate(270deg);
+    position: absolute;
+    top: 55px;
+    left: -100px;
+}
+
+.four>h2:before {
+    content: 'DENIM';
+    position: absolute;
+    top: -15px;
+    height: 20px;
+    color: #000;
+    opacity: 0.3;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.four>h2:after {
+    content: 'DENIM';
+    position: absolute;
+    top: -25px;
+    height: 15px;
+    left: 0;
+    color: #000;
+    opacity: 0.1;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.four>h3 {
+    position: absolute;
+    left: -60px;
+    bottom: -50px;
+}
+
+.four>h4 {
+    position: absolute;
+    transform: rotate(270deg);
+    top: -95px;
+    right: -30px;
+}
+
+.four>.slash-box {
+    position: absolute;
+    background-position: left;
+    background-size: auto;
+    width: 240px;
+    height: 100px;
+    /* background: grey; */
+    background-image: url(https://hexschool.github.io/THE_F2E_Design/week4-product%20gallery/assets/pattern%20unit.png);
+    left: 0px;
+    bottom: -50px;
+}
+
+.four-box {
+    grid-column-start: 6;
+    grid-row-start: 8;
+    width: 240px;
+    height: 200px;
+    border: 20px solid #50E3C2;
+    margin-left: 60px;
+}
+
+.five {
+    position: relative;
+    grid-column: 3/5;
+    grid-row: 13 /15;
+    background-image: url(https://images.unsplash.com/photo-1525448198276-222de3961638?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=43fb25556cdbd191e520c7f28739e40d&auto=format&fit=crop&w=1350&q=80);
+    z-index: 10;
+}
+
+.five>.slash-box {
+    position: absolute;
+    background-position: left;
+    background-size: auto;
+    width: 240px;
+    height: 100px;
+    /* background: grey; */
+    background-image: url(https://hexschool.github.io/THE_F2E_Design/week4-product%20gallery/assets/pattern%20unit.png);
+    left: -200px;
+    top: -50px;
+}
+
+.five>h2 {
+    position: absolute;
+    top: 50px;
+    left: -260px;
+    z-index: 2;
+}
+
+.five>h2:before {
+    content: 'SWEATSHIRTS';
+    position: absolute;
+    top: -15px;
+    height: 20px;
+    color: #000;
+    opacity: 0.3;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.five>h2:after {
+    content: 'SWEATSHIRTS';
+    position: absolute;
+    top: -25px;
+    height: 15px;
+    left: 0;
+    color: #000;
+    opacity: 0.1;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.five>h4 {
+    position: absolute;
+    top: 0;
+    right: -150px;
+}
+
+.five-box {
+    grid-column-start: 2;
+    grid-row-start: 14;
+    width: 240px;
+    height: 100px;
+    border: 20px solid #50E3C2;
+    left: -20px;
+    bottom: -50px;
+}
+
+.five-box>h3 {
+    position: absolute;
+    left: -20px;
+    top: -20px;
+}
+
+.six {
+    z-index: 10;
+    position: relative;
+    grid-column: 5/ 9;
+    grid-row: 15/19;
+    background-image: url(https://images.unsplash.com/photo-1519406709381-c1f293304b28?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98c497a29f229085d9574ee8b6eeef8c&auto=format&fit=crop&w=668&q=80);
+}
+
+.six>h2 {
+    position: absolute;
+    top: -50px;
+    right: 0;
+}
+
+.six>h2:before {
+    content: 'VINTAGE DENIM';
+    position: absolute;
+    top: -15px;
+    height: 20px;
+    color: #000;
+    opacity: 0.3;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.six>h2:after {
+    content: 'VINTAGE DENIM';
+    position: absolute;
+    top: -25px;
+    height: 15px;
+    left: 0;
+    color: #000;
+    opacity: 0.1;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.six>h4 {
+    position: absolute;
+    bottom: -30px;
+    left: 160px;
+}
+
+.six-box {
+    position: relative;
+    grid-column: 5;
+    grid-row: 17;
+    width: 480px;
+    height: 200px;
+    border: 20px solid #50E3C2;
+    bottom: -55px;
+}
+
+.six-box>.six-boxbox {
+    position: absolute;
+    width: 240px;
+    height: 200px;
+    background: #50E3C2;
+    bottom: 35px;
+    left: -80px;
+    z-index: 1;
+}
+
+.six-box>h3 {
+    position: absolute;
+    bottom: 230px;
+    left: -80px;
+    z-index: 2;
+}
+
+.seven {
+    position: relative;
+    z-index: 10;
+    grid-column: 1/3;
+    grid-row: 17/21;
+    background-image: url(https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=63ff45d79414b3166b08b800a32018be&auto=format&fit=crop&w=668&q=80);
+}
+
+.seven>h2 {
+    position: absolute;
+    transform: rotate(90deg);
+    right: -120px;
+    top: 77px;
+}
+
+.seven>h2:before {
+    content: 'EDITION';
+    position: absolute;
+    top: -15px;
+    height: 20px;
+    color: #000;
+    opacity: 0.3;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.seven>h2:after {
+    content: 'EDITION';
+    position: absolute;
+    top: -25px;
+    height: 15px;
+    left: 0;
+    color: #000;
+    opacity: 0.1;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.seven-box {
+    grid-column: 1;
+    grid-row: 16;
+    top: 50px;
+    left: 50px;
+    width: 240px;
+    height: 400px;
+    border: 20px solid #50E3C2;
+}
+
+.seven-boxbox {
+    position: relative;
+    grid-column: 2/4;
+    grid-row: 19/21;
+    background: #50E3C2;
+}
+
+.seven-boxbox>h3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
